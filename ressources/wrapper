@@ -1,0 +1,13 @@
+
+
+declarer un wrapper
+
+Integer i = new Integer(12);
+
+methode static
+c'est static parceque on appelle directement la classe Integer
+
+String phrase = "coucou";
+
+int i = Integer.parseInt(phrase);
+
