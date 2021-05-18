@@ -18,7 +18,7 @@ public class Compte {
     public int getNumero() {
         return numero;
     }
-    protected void setSolde(double solde) {
+    public void setSolde(double solde) {
         this.solde = solde;
     }
     private void setNumero(int numero) {
@@ -32,15 +32,13 @@ public class Compte {
     }
 
 
-
-
-    public void retirer(double unMontant) throws BanqueException {
+    public void retirer(double unMontant) {
         boolean ok = true;
 
         if (!ok) {
             this.setSolde(this.getSolde() - unMontant);
         } else {
-            throw new BanqueException("Le seuil est trop bas");
+            System.out.println("Le seuil est trop bas");
         }
 
 
