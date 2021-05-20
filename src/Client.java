@@ -76,6 +76,28 @@ public class Client {
 
     }
 
+
+//    public void ajouterUnCompte(Compte compte) {
+//        this.comptes.put(compte.getNumero(), compte);
+//
+//        //TODO ajouter logique écriture dans un fichier des comptes clients
+//        PersisteCompte.createCompte(this, );
+//
+//    }
+
+    /**
+     * Permet de créer le fichier du client
+     */
+    public void createClientFolder() {
+        PersisteCompte.createFolder(this.getNom(), this.getPrenom());
+    }
+
+
+
+
+
+
+
     public Compte getCompte(int numeroDeCompte) {
         Compte compte = new Compte();
         boolean find = false;
@@ -92,7 +114,6 @@ public class Client {
 
         return compte;
     }
-
 
     @Override
     public String toString() {

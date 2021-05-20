@@ -1,5 +1,6 @@
 import exceptions.BanqueException;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -33,6 +34,25 @@ public class Main {
         casr1.ajouter(15000);
         System.out.println(casr1.getSolde());
         casr1.retirer(8000);
+
+
+
+
+
+
+        try {
+            NomPrenomReader.readNom().forEach(nom -> {
+                System.out.println(nom);
+            });
+
+            NomPrenomReader.readPrenom().forEach(prenom -> {
+                System.out.println(prenom);
+            });
+
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+
 
 
 
